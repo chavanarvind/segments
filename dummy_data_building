@@ -1,0 +1,75 @@
+def create_churn_class_data():
+    num_customers = 500
+ 
+    # Generate the features
+    customer_id = np.random.randint(4501, 5001, size=num_customers)
+    income = np.random.randint(30000, 150000, size=num_customers)  # Annual income
+    credit_limit = income * np.random.uniform(0.1, 0.4, num_customers)  # Correlated with income
+    num_products = np.random.randint(1, 2, size=num_customers)  # Number of products (1 to 4)
+    cross_sell_freq = np.random.randint(0, 7, num_customers)  # Frequency of cross-sell attempts
+    change_transaction_perc = np.random.uniform(0.01, 0.5, num_customers)  # Change in transaction percentage
+    inbound_calls = np.random.randint(5, 30, num_customers)  # How many times customer contacted support
+    avg_wait_time = np.random.randint(30, 600, num_customers)  # Average wait time in seconds
+    change_default_value = np.random.uniform(-0.05, 0.5, num_customers)  # Change in default value
+    monthly_card_value = np.random.uniform(2500, 50000, num_customers)  # Monthly card user value
+    card_utilization_prec = np.random.randint(50, 80, num_customers)
+    points_earned = np.random.uniform(3000, 10000, num_customers)  # Points earned
+    points_redeemed = points_earned * np.random.uniform(0.4, 0.9, num_customers)  # Points redeemed
+    discount_earned = np.random.uniform(100, 1000, num_customers)  # Discount amount earned
+    discount_redeemed = discount_earned * np.random.uniform(0.2, 1.0, num_customers)  # Discount redeemed
+    age = np.random.randint(20, 60, size=num_customers)  
+    relationship_tenure = age * np.random.uniform(0.1, 0.4, num_customers)
+    cltv = np.random.uniform(30000, 85000, num_customers)
+    relationship_tenure = np.random.randint(1, 20, num_customers)  # Relationship tenure in years
+    gender =  np.random.choice(["Male", "Female"], size=num_customers)
+    marital_status = np.random.choice(["Married", "Unmarried"], size=num_customers)
+    occupation = np.random.choice(["Salaried", "Business"], size=num_customers)
+    education_level = np.random.choice(["High", "Medium", "Low"], size=num_customers)  
+    geographic_location = np.random.choice(["Tier1", "Tier 2", "Tier 3", "Tier 4"], size=num_customers)
+    total_card_count =  np.random.randint(1, 4, size=num_customers)
+    dormant_cards =  total_card_count * np.random.uniform(0.0, 0.5, num_customers)
+    acquisition_channel =  np.random.choice(["Kiosk", "Office", "Active Reach"], size=num_customers)  
+    recent_limt_upgrade = np.random.randint(50, 130, size=num_customers)
+    job_change_flag = np.random.choice(["Yes", "No"], size=num_customers)
+    location_change_flag = np.random.choice(["Yes", "No"], size=num_customers)
+    fee_waiver = np.random.choice(["Yes", "No"], size=num_customers)
+    transaction_size =  np.random.uniform(1000, 50000, num_customers)
+ 
+    # Initialize churn with zeros
+    churn = np.zeros(num_customers)
+ 
+    data = pd.DataFrame({
+        'CustomerID' : customer_id,
+        'Age' : age,
+        'RelationshipTenure' : relationship_tenure,
+        'MaritalStatus': marital_status,
+        'Occupation': occupation,
+        'EducationLevel': education_level,
+        'GeographicLocation': geographic_location,
+        'Income': income,
+        "NumOfCards": total_card_count,
+        "AcquisitionChannel": acquisition_channel,
+        "RecentLimtUpgrade": recent_limt_upgrade,
+        'CreditLimit': credit_limit,
+        'NumProducts': num_products,
+        'CrossSellFreq': cross_sell_freq,
+        'ChangeTransactionPerc': change_transaction_perc,
+        'Inbound_Calls': inbound_calls,
+        'AvgWaitTime': avg_wait_time,
+        'ChangeDefaultValue': change_default_value,
+        'MonthlyCardUtilization': card_utilization_prec,
+        'PointsEarned': points_earned,
+        'PointsRedeemed': points_redeemed,
+        'DiscountEarned': discount_earned,
+        'DiscountRedeemed': discount_redeemed,
+        'RelationshipTenure': relationship_tenure,
+        "JobChange": job_change_flag,
+        "LocationChange": location_change_flag,
+        "FeeWaiver": fee_waiver,
+        'TransactionSize' : transaction_size,
+        'CustomerLifeTimeValue' : cltv,
+        'Churn': churn
+    })
+ 
+    return(data)
+ 
