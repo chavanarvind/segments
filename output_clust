@@ -6,3 +6,51 @@ Cluster
 1              2.54  1.08         1007.30  196.14  15007.23  3146.85        29.79  6.06            1004.43  146.28               2.98  0.81
 2              1.99  0.09          306.27   58.36   9804.54  2119.71        59.46  6.35             802.95   78.30               4.03  0.84
 3              1.00  0.00           49.98    9.66   3008.05   499.04        91.94  4.40             301.64   21.95               1.48  0.50
+
+
+Analysis:
+Cluster 0:
+
+NumProducts: High (mean = 3.00)
+TransactionSize: Moderate (mean = 711.96)
+Balance: High (mean = 20,203.15)
+LoyaltyScore: Moderate (mean = 39.70)
+RevenuePerCustomer: High (mean = 1,499.91)
+RelationshipTenure: High (mean = 7.52)
+Segment Name: "High Value, Established Customers"
+(These customers have the highest balance, long tenure, and high revenue per customer.)
+Cluster 1:
+
+NumProducts: Moderate (mean = 2.54)
+TransactionSize: High (mean = 1,007.30)
+Balance: Moderate (mean = 15,007.23)
+LoyaltyScore: Low (mean = 29.79)
+RevenuePerCustomer: Moderate (mean = 1,004.43)
+RelationshipTenure: Short (mean = 2.98)
+Segment Name: "Moderate Value, Recent Customers"
+(These customers spend more on transactions but have shorter tenure and lower loyalty.)
+Cluster 2:
+
+NumProducts: Low (mean = 1.99)
+TransactionSize: Low (mean = 306.27)
+Balance: Low (mean = 9,804.54)
+LoyaltyScore: High (mean = 59.46)
+RevenuePerCustomer: Low (mean = 802.95)
+RelationshipTenure: Moderate (mean = 4.03)
+Segment Name: "Loyal Low Spenders"
+(These customers show high loyalty but contribute less in terms of spending and balance.)
+Cluster 3:
+
+NumProducts: Very Low (mean = 1.00)
+TransactionSize: Very Low (mean = 49.98)
+Balance: Very Low (mean = 3,008.05)
+LoyaltyScore: Very High (mean = 91.94)
+RevenuePerCustomer: Very Low (mean = 301.64)
+RelationshipTenure: Very Short (mean = 1.48)
+Segment Name: "New Low Value Customers"
+(These are likely new customers with minimal engagement and low spending.)
+Final Segment Names:
+Cluster 0: High Value, Established Customers
+Cluster 1: Moderate Value, Recent Customers
+Cluster 2: Loyal Low Spenders
+Cluster 3: New Low Value Customers
