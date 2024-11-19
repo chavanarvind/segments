@@ -1,0 +1,8 @@
+Summary of numerical features by cluster:
+        NumProducts       TransactionSize           Balance          LoyaltyScore       RevenuePerCustomer         RelationshipTenure      
+               mean   std            mean     std      mean      std         mean   std               mean     std               mean   std
+Cluster                                                                                                                                    
+0              3.00  0.00          711.96  115.79  20203.15  4278.19        39.70  5.66            1499.91  194.42               7.52  1.14
+1              2.54  1.08         1007.30  196.14  15007.23  3146.85        29.79  6.06            1004.43  146.28               2.98  0.81
+2              1.99  0.09          306.27   58.36   9804.54  2119.71        59.46  6.35             802.95   78.30               4.03  0.84
+3              1.00  0.00           49.98    9.66   3008.05   499.04        91.94  4.40             301.64   21.95               1.48  0.50
